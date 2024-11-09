@@ -1,0 +1,165 @@
+:root {
+  --primary: #2cfffc;
+
+  --background: #06090f;
+  --foreground: #151b26;
+
+  --text-primary: #fff;
+  --text-secondary: #bfbfbf;
+}
+
+/*------------- play video -----------------*/
+
+.container-play-video {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  grid-template-rows: 440px;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+.play-video {
+  display: grid;
+  grid-template-rows: 60px 380px;
+}
+
+.play-video h1 {
+  margin-top: 0;
+  align-self: flex-end;
+}
+
+.play-video img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.most-watched {
+  display: grid;
+  grid-template-rows: 60px calc(380px - 1.5rem);
+}
+
+.most-watched h2 {
+  font-size: 1rem;
+  display: flex;
+  align-self: center;
+  color: var(--text-secondary);
+}
+
+.boxes-most-watched {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.box-most-watched {
+  display: flex;
+  gap: 1rem;
+  height: 25%;
+  background-color: var(--foreground);
+}
+
+.box-most-watched img {
+  height: 100%;
+  width: 30%;
+  object-fit: cover;
+}
+
+.content-box-most-watched {
+  padding: 1rem 0;
+}
+
+/*------------- details -----------------*/
+.anime-details {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.img-anime {
+  flex: 1 25%;
+}
+
+.anime-details img {
+  border-radius: 1.5rem;
+}
+
+.anime-content {
+  flex: 1 1 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+/*------------- details -----------------*/
+.coments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.coments button {
+  align-self: center;
+}
+
+.coment {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.img-user {
+  width: 50px;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+
+.img-user img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5rem;
+}
+
+@media (max-width: 884px) {
+  .container-play-video {
+    grid-template-columns: 1fr;
+  }
+  .most-watched,
+  .img-anime {
+    display: none;
+  }
+
+  .anime-content,
+  .container-coments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .coments {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 658px) {
+  .container-play-video {
+    grid-template-rows: 250px;
+  }
+
+  .play-video {
+    grid-template-rows: 40px 210px;
+  }
+
+  .anime-content,
+  .container-coments {
+    display: flex;
+    flex-direction: column;
+  }
+}
